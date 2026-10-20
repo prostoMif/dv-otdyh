@@ -73,7 +73,8 @@ p{margin:0 0 1em}
 .prices{margin:6px 0 16px}
 .prices .row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line)}
 .prices dt{color:var(--muted);min-width:0}
-.prices dd{margin:0;font-weight:800;white-space:nowrap;text-align:right}
+.prices dt{flex:1 1 auto}
+.prices dd{margin:0;font-weight:800;text-align:right;min-width:0;max-width:60%;overflow-wrap:anywhere;text-wrap:balance}
 .more-prices{margin:-8px 0 16px}
 .more-prices summary{cursor:pointer;font-weight:700;color:var(--acc);padding:8px 0;list-style:none}
 .more-prices summary::-webkit-details-marker{display:none}
@@ -114,7 +115,8 @@ p{margin:0 0 1em}
 .foot{padding:28px 0 36px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 
 .dock{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;gap:6px;padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
-.dock a{flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--card);border:1px solid var(--line);font-weight:700;font-size:15px;text-decoration:none}
+.dock a{flex:1 1 0;min-width:0;padding:0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-height:48px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--card);border:1px solid var(--line);font-weight:700;font-size:15px;text-decoration:none}
+.dock:has(a:nth-child(4)) a{font-size:14px}
 .dock .dock-main{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
 
 .lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center}
